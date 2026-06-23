@@ -3,7 +3,7 @@ require("dotenv").config();
 module.exports = {
   GITHUB_TOKEN: process.env.GITHUB_TOKEN,
 
-  ALERT_THRESHOLD: 65,
+  ALERT_THRESHOLD: 25,
   MAX_FILE_SIZE: 750000,
 
   RATE_LIMIT_SLEEP: 3000,
