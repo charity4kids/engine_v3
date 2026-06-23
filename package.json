@@ -1,0 +1,5 @@
+"dependencies": {
+  "pg": "^8.x",
+  "axios": "^1.x",
+  "dotenv": "^16.x"
+}
