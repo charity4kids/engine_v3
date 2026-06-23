@@ -3,13 +3,15 @@ const sendTelegram = require("./telegram");
 
 const alerted = new Map();
 
-function shouldAlert(repo, data, threshold) {
+/* function shouldAlert(repo, data, threshold) {
   const uniqueIOC = data.matches.size;
   const categoryScore = data.categories.size;
 
   return data.score >= threshold && uniqueIOC >= 3 && categoryScore >= 2;
+} */
+function shouldAlert(repo, data, threshold) {
+  return data.score >= threshold && data.matches.size >= 2;
 }
-
 async function evaluate(repos, threshold) {
   const now = Date.now();
 
